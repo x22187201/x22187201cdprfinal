@@ -1,0 +1,42 @@
+{% extends 'dapp/base.html' %}
+
+{% block body %}
+
+
+<div class="item-container flex">
+    {% for item in items %}
+    <div class="item shadow-lg w-1/4 rounded-lg m-10">
+        <div class="item-image">
+            <img src="https://designshack.net/wp-content/uploads/placeholder-image-368x247.png" alt="">
+        </div>
+        <div class="p-5">
+            <div class="font-semibold">
+                {{ item.name}}
+            </div>
+            <div>
+                {{ item.description}}   
+            </div>
+            <div>
+                Created by {{ item.seller}}   
+            </div>
+            <div class="text-blue-500 font-semibold">
+                €{{ item.price}} 
+            </div>
+            <div class="mt-5">
+                <a class="bg-red-500 text-white px-4 py-2" href="{% url 'detail' item.id%}"> View Details</a>
+            </div>
+
+        </div>
+
+    </div>
+   
+
+{% endfor %}
+
+
+</div>
+
+{% endblock %}
+
+
+

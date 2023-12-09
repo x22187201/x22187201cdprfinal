@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'dapp/styles.css' %}">
+</head>
+<body>
+    <nav class="shadow-lg bg-blue-200 ">
+        <div class="flex flex-wrap justify-between ml-5 items-center mx-auto px-4 py-2.5">
+            <a href="" class="flex items-center">
+                <img class="h-9 mr-3 " src="https://cdn2.iconfinder.com/data/icons/vivid/48/cart-512.png" alt="">
+                <span class="self-centre text-xml font-semibold">Digital Mart</span>
+            </a>
+          
+        </div>
+    </nav>
+
+    <div class="flex flex-col justify-center items-center min-h-screen ">
+        <h1 class="font-bold text-lg">Login</h1>
+    
+        <form class="shadow-lg p-10  bg-blue-200" method="POST">
+            {% csrf_token %}
+            <div class="mb-2">
+                <label for="">Username</label>
+                <div class="border rounded py-2 px-2 mr-10">
+                    {{ form.username}}
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="">Password</label>
+                <div class="border rounded py-2 px-2 mr-10">
+                    {{ form.password}}
+                </div>
+            </div>
+            
+            
+            <button class="bg-blue-500 text-white px-4 py-2" type="submit">Login </button>
+        </form>
+        <p class="m-10">New to the website? <span> <a class="text-indigo-500" href="{% url 'register'%}">Click here</a> to register</p></span>
+    </div>
+    
+       
+    
+    
+   
+</body>
+</html>

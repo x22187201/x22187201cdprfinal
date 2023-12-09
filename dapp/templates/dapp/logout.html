@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'dapp/styles.css' %}">
+</head>
+<body>
+    <nav class="shadow-lg bg-blue-200">
+        <div class="flex flex-wrap justify-between ml-5 items-center mx-auto px-4 py-2.5">
+            <a href="" class="flex items-center">
+                <img class="h-9 mr-3 " src="https://cdn2.iconfinder.com/data/icons/vivid/48/cart-512.png" alt="">
+                <span class="self-centre text-xml font-semibold">Digital Mart</span>
+            </a>
+          
+        </div>
+    </nav>
+    <div class="flex flex-col justify-center items-center min-h-screen">
+    <h1 class="font-bold text-lg">You have been logged out</h1>
+    <p><span><a class="text-indigo-500" href="{% url 'login'%}">Click here</a> to login</span></p>
+
+    
+    </div>
+
+    
+</body>
+</html>
+
+
+

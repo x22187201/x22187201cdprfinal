@@ -1,0 +1,20 @@
+{% extends 'dapp/base.html' %}
+{% block body %}
+
+    <div class="flex">
+        <div>
+            <img src="https://designshack.net/wp-content/uploads/placeholder-image-368x247.png" alt="">
+
+        </div>
+        <div class="pl-10">
+            <div class="text-4xl mb-4">{{item.name}}</div>
+            <div class="mb-4">{{item.description}}</div>
+            <div class="mb-4 text-blue-500 font-semibold">{{item.price}}</div>
+            <div>
+                <button id="checkout-button" class="bg-red-500 text-white px-4 py-2 rounded-sm">Buy</button>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
