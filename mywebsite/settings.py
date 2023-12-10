@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-a*_asbjd*@mx69#jm1h!1q-k5r1ljqwlxqb35!j_2je^s@7f2d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
+CSRF_TRUSTED_ORIGINS=['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
 'https://x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com',
+ALLOWED_HOSTS=['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com',
 '20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com','172.31.45.147']
 
 
@@ -87,10 +87,9 @@ DATABASES = {
         'NAME':'mydatabase',
         'USER':'postgres',
         'PASSWORD':'mydbpassword',
-        'HOST':'x22187201db.chwlezgyi7rm.eu-west-1.rds.amazonaws.com',  # RDS endpoint
-        'PORT':'5432',  # Adjust the port based on your RDS configuration
-        
-}
+        'HOST':'x22187201db.chwlezgyi7rm.eu-west-1.rds.amazonaws.com',# RDS endpoint
+        'PORT':'5432',# Adjust the port based on your RDS configuration
+        }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -125,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL ='/static/'
-STATIC_ROOT =BASE_DIR /'static' 
+STATIC_ROOT =BASE_DIR /'static'
 MEDIA_ROOT =BASE_DIR /'media'
 MEDIA_URL ='/media/'
 
