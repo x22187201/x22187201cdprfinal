@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-a*_asbjd*@mx69#jm1h!1q-k5r1ljqwlxqb35!j_2je^s@7f2d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com']
-ALLOWED_HOSTS = ['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com']
+CSRF_TRUSTED_ORIGINS = ['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com','https://x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com','20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com','172.31.45.147']
 
 
 # Application definition
