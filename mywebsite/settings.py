@@ -28,7 +28,8 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS=['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
 'https://x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com']
 ALLOWED_HOSTS=['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com',
-'20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com','172.31.45.147','34.255.59.254','54.228.123.3']
+'20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
+'172.31.45.147','34.255.59.254','54.228.123.3']
 
 
 # Application definition
