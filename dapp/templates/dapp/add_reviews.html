@@ -1,0 +1,29 @@
+{% extends 'dapp/base.html' %}
+{% block body %}
+{% load static %}
+<div class="container">
+    <!-- Add Reviews Form -->
+    <div class="col-md-3 mt-4">
+        <div class="card text-white bg-dark mb-3 text-center">
+            <h4><strong>Add Reviews</strong></h4>
+        </div>
+
+        <form method="post" action="{% url 'convert' %}">
+            {% csrf_token %}
+            Rating: <input type="string" name="rating" required placeholder="Enter rating"><br><br>
+            Comment: <input type="text" name="comment" required placeholder="Enter comment"><br><br>
+            <input type="submit" name="review_submit" value="Add Review">
+        </form>
+        <br>
+
+        <!-- Display Review Result -->
+        {% if review_result %}
+        <div class="card text-white bg-dark mb-3 text-center">
+            <h4><strong>Review added successfully</strong></h4>
+        
+        {% elif error %}
+        <p><strong>Error: {{ error }}</strong></p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -23,13 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a*_asbjd*@mx69#jm1h!1q-k5r1ljqwlxqb35!j_2je^s@7f2d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+
+AWS_ACCESS_KEY_ID = 'ASIATUYJP7SUAOCCVRHM' #Enter your AWS Access Key ID
+AWS_SECRET_ACCESS_KEY = 'y5eL/sMsVDK++nErovt0g1xVuywk5Wu5pyJUWyOo' #Enter your AWS secret Access Key ID
+AWS_REGION = 'us-west-2'  # e.g., 'us-east-1'
 
 CSRF_TRUSTED_ORIGINS=['https://20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
 'https://x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com']
 ALLOWED_HOSTS=['x22187201cddemo--env.eba-jwt32wxq.eu-west-1.elasticbeanstalk.com',
 '20c90619b6154bf5981a2ce2fbf6eb4f.vfs.cloud9.eu-west-1.amazonaws.com',
-'172.31.45.147','34.255.59.254','54.228.123.3']
+'172.31.45.147','34.255.59.254','54.228.123.3','127.0.0.1']
 
 
 # Application definition
@@ -85,13 +90,23 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'mydatabase',
+        'NAME':'reviewsdb',
         'USER':'postgres',
         'PASSWORD':'mydbpassword',
-        'HOST':'x22187201db.chwlezgyi7rm.eu-west-1.rds.amazonaws.com',# RDS endpoint
+        'HOST':'reviewsdb.clduwfwypz0p.us-west-2.rds.amazonaws.com',# RDS endpoint
         'PORT':'5432',# Adjust the port based on your RDS configuration
         }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+STRIPE_SECRET_KEY ='sk_test_51P4kF8Hxlxot4R9vrSXJdxdCW8RXj91xHPdOcfayoLBGmtbZ2JPl0GbdlTs6YNUsUiRJbCKzXkhSYVv1uBOug2FM005QLgQRn8'
+STRIPE_PUBLISHABLE_KEY='pk_test_51P4kF8Hxlxot4R9v4eTqgvNI39EPUinSZjAfYx16WznFDSCEWNlCo2GprWzwV60FcbP54hV0JFWaP2ChpKzUW4Le00xyt0ieOw'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

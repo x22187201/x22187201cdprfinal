@@ -1,0 +1,37 @@
+{% extends 'dapp/base.html' %}
+
+{% block body %}
+<div class="container">
+    <!--Currency Coverter Logic-->
+    <div class="col-md-3 mt-4">
+        <div class="card text-white bg-dark mb-3 text-center">
+            <h4><strong>TIMEZONE</strong></h4>
+        </div>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        country: <input type="float" name="country" required placeholder="Enter country"><br>
+        <br>
+        city: <input type="float" name="city" step="any" required placeholder="Enter city"><br>
+        <br>
+        <input type="submit" name="timezone_submit" value="Calculate time">
+    </form>
+    <br>
+    <!--Currency Coverter Results Display-->
+    {% if timezone_result %}
+    <div class="card text-white bg-dark mb-3 text-center">
+        <h4><strong>Your Time</strong></h4>
+    </div>
+    <br>
+    <p><strong>Converted Timezone: {{ timezone_result.tzTime }}</strong></p>
+    
+
+    {% elif error %}
+    <p><strong>Error: {{ error }}</strong></p>
+    {% endif %}
+    </div>
+
+    
+    
+</div>
+{% endblock %}

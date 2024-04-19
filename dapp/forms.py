@@ -1,5 +1,5 @@
 from django import forms
-from .models import Items
+from .models import Items,OrderDetail
 from django.contrib.auth.models import User
 from django.core import validators
 
@@ -8,6 +8,10 @@ class ItemForm(forms.ModelForm):
         model = Items
         fields = ['name','description','price','file']
 
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = OrderDetail
+        fields = ['customer_email','item','amount','stripe_payment_intent','has_paid']
 class RegistrationForm(forms.ModelForm):
     email = forms.EmailField(validators=[validators.validate_email])
     min_length = 2
@@ -26,7 +30,7 @@ class RegistrationForm(forms.ModelForm):
     password1 = forms.CharField(label=' Confirm Password',widget=forms.PasswordInput)
     class Meta:
         model = User
-        fields = ['username','email','first_name']
+        fields = ['username','email']
 
     def validate_password(self):
         if self.cleaned_data['password']!= self.cleaned_data['password1']:
